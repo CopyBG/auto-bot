@@ -8,12 +8,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: geodeios/geode-sdk:latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build Android
+      
+      - name: Download Geode CLI
+        run: |
+          wget https://github.com/geode-sdk/cli/releases/download/v3.0.0-beta.2/geode-cli-x86_64-unknown-linux-gnu.zip
+          unzip geode-cli-x86_64-unknown-linux-gnu.zip
+          echo "$(pwd)" >> $GITHUB_PATH
+      
+      - name: Configure Geode
+        run: geode configure
+      
+      - name: Build Mod
         run: geode build -p android64
+      
       - uses: actions/upload-artifact@v4
         with:
           name: AutoBot
