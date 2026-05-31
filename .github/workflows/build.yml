@@ -13,7 +13,7 @@ jobs:
       
       - name: Download Geode CLI
         run: |
-          wget https://github.com/geode-sdk/cli/releases/download/v3.0.0-beta.2/geode-cli-x86_64-unknown-linux-gnu.zip
+          wget https://github.com/geode-sdk/cli/releases/latest/download/geode-cli-x86_64-unknown-linux-gnu.zip
           unzip geode-cli-x86_64-unknown-linux-gnu.zip
           echo "$(pwd)" >> $GITHUB_PATH
       
