@@ -1,0 +1,15 @@
+{
+  "geode": "v3.0.0-beta.1",
+  "version": "v1.0.0",
+  "id": "Anyt.auto-bot",
+  "name": "Auto Bot",
+  "developer": "Anyt",
+  "description": "Bot for Geometry Dash",
+  "settings": {
+    "enabled": {
+      "name": "Bot Enabled",
+      "type": "bool",
+      "default": false
+    }
+  }
+}
